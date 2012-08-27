@@ -1,0 +1,41 @@
+{
+  "name": "element-list",
+  "version": "0.0.1",
+  "description": "A splice stream that renders a list of elements",
+  "keywords": [],
+  "author": "Raynos <raynos2@gmail.com>",
+  "repository": "git://github.com/Raynos/element-list.git",
+  "main": "index",
+  "homepage": "https://github.com/Raynos/element-list",
+  "contributors": [
+    {
+      "name": "Jake Verbaten"
+    }
+  ],
+  "bugs": {
+    "url": "https://github.com/Raynos/element-list/issues",
+    "email": "raynos2@gmail.com"
+  },
+  "dependencies": {
+    "splice-stream": "~0.2.1",
+    "append-to": "0.0.1"
+  },
+  "devDependencies": {
+    "browserify-server": "~1.1.3",
+    "text-node": "~0.2.0",
+    "fragment": "~0.3.0",
+    "dom-walk": "0.0.1",
+    "through": "~0.1.4",
+    "discovery-network": "~0.6.1",
+    "mux-demux": "~3.3.2",
+    "node-uuid": "~1.3.3",
+    "form-stream": "0.0.1"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://github.com/Raynos/element-list/raw/master/LICENSE"
+    }
+  ],
+  "scripts": {}
+}
