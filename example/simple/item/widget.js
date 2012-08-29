@@ -6,19 +6,15 @@ var Fragment = require("fragment")
 
 module.exports = Widget
 
-function Widget(stream, wrapper, remove) {
+function Widget(stream, wrapper) {
     var widget = Fragment(widgetHtml)
         , form = Fragment(formHtml)
         , textStream = TextNode(widget)
         , inputStream = FormStream(form)
 
-    inputStream.pipe(stream).pipe(textStream)
+    console.log("creating widget", inputStream, stream, textStream)
 
-    form.firstChild.addEventListener("click", function (evt) {
-        if (evt.target.tagName === "BUTTON") {
-            remove()
-        }
-    })
+    inputStream.pipe(stream).pipe(textStream)
 
     wrapper.appendChild(widget)
     wrapper.appendChild(form)
