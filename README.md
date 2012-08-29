@@ -5,15 +5,11 @@ A splice stream that renders a list of elements
 ## Example
 
 ``` js
-var stream = ElementList({
-    list: "ul"
-    , item: "li"
-}, function (item, element, remove) {
+var stream = ElementList(function (item, element) {
     /*
         Item is the item you added to the list.
         Element is a wrapper element generated from the item option. A li
             in this case
-        remove is a utility function to remove this item from the list
     */
 
     /* do your rendering logic */
