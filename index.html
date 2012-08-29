@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="Element-list : A splice stream that renders a list of elements" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Element-list</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/Raynos/element-list">View on GitHub</a>
+
+          <h1 id="project_title">Element-list</h1>
+          <h2 id="project_tagline">A splice stream that renders a list of elements</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/Raynos/element-list/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/Raynos/element-list/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>element-list</h1>
+
+<p>A splice stream that renders a list of elements</p>
+
+<h2>Example</h2>
+
+<div class="highlight"><pre><span class="kd">var</span> <span class="nx">stream</span> <span class="o">=</span> <span class="nx">ElementList</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">item</span><span class="p">,</span> <span class="nx">element</span><span class="p">)</span> <span class="p">{</span>
+    <span class="cm">/*</span>
+<span class="cm">        Item is the item you added to the list.</span>
+<span class="cm">        Element is a wrapper element generated from the item option. A li</span>
+<span class="cm">            in this case</span>
+<span class="cm">    */</span>
+
+    <span class="cm">/* do your rendering logic */</span>
+    <span class="kd">var</span> <span class="nx">span</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s2">"span"</span><span class="p">)</span>
+    <span class="nx">span</span><span class="p">.</span><span class="nx">textContent</span> <span class="o">=</span> <span class="nx">item</span>
+    <span class="nx">element</span><span class="p">.</span><span class="nx">appendChild</span><span class="p">(</span><span class="nx">span</span><span class="p">)</span>
+<span class="p">})</span>
+
+<span class="c1">// Since stream is a splice-stream you can call the createList function</span>
+<span class="kd">var</span> <span class="nx">list</span> <span class="o">=</span> <span class="nx">stream</span><span class="p">.</span><span class="nx">createList</span><span class="p">()</span>
+
+<span class="c1">// list is just a List object from splice-stream so do stuff</span>
+<span class="nx">list</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="s2">"some value. Anything you want"</span><span class="p">)</span>
+
+<span class="c1">// Make sure to append the elementList somewhere. </span>
+<span class="c1">// Yes it's a stream and has custom</span>
+<span class="nx">stream</span><span class="p">.</span><span class="nx">appendTo</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">)</span>
+</pre></div>
+
+<h2>Installation</h2>
+
+<p><code>npm install element-list</code></p>
+
+<h2>Contributors</h2>
+
+<ul>
+<li>Raynos</li>
+</ul><h2>MIT Licenced</h2>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Element-list maintained by <a href="https://github.com/Raynos">Raynos</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
