@@ -23,22 +23,16 @@ function ElementList(options, callback) {
 
         listElem.insertBefore(elem, ref)
 
-        console.log("add triggered")
         callback(item, elem, index)
     })
 
     list.on("move", function (item, newIndex, oldIndex) {
-        console.log("move", listElem, newIndex, oldIndex)
-        console.log("list", [].slice.call(listElem.children))
-        console.log("elem", listElem.children[oldIndex])
-        console.log("ref", listElem.children[newIndex])
         listElem.insertBefore(
             listElem.children[oldIndex]
             , listElem.children[newIndex] || null)
     })
 
     list.on("remove", function (item, index) {
-        console.log("remove triggered")
         listElem.removeChild(listElem.children[index])
     })
 

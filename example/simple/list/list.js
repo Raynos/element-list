@@ -36,14 +36,6 @@ function List() {
     // handle drops
     listElem.addEventListener("drop", handleDrop)
 
-    list.on("add", function (item, index) {
-        console.log("add", item, index)
-    })
-
-    list.on("remove", function (item, index) {
-        console.log("remove", item, index)
-    })
-
     return listStream
 
     function addStream() {

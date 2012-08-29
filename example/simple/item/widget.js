@@ -12,8 +12,6 @@ function Widget(stream, wrapper) {
         , textStream = TextNode(widget)
         , inputStream = FormStream(form)
 
-    console.log("creating widget", inputStream, stream, textStream)
-
     inputStream.pipe(stream).pipe(textStream)
 
     wrapper.appendChild(widget)
