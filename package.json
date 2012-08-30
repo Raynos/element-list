@@ -1,6 +1,6 @@
 {
   "name": "element-list",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A splice stream that renders a list of elements",
   "keywords": [],
   "author": "Raynos <raynos2@gmail.com>",
